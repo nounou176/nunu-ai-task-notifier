@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <title>NUNU AI Task Notifier</title>
+
+  <link
+    rel="stylesheet"
+    href="popup.css"
+  >
+</head>
+
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <div class="eyebrow">
+          NUNU
+        </div>
+
+        <h1>
+          AI Task Notifier
+        </h1>
+      </div>
+
+      <div
+        id="unreadBadge"
+        class="unread-badge hidden"
+      >
+        0
+      </div>
+    </header>
+
+
+    <section class="panel">
+      <div class="section-label">
+        ALERT MODE
+      </div>
+
+      <div
+        class="segmented"
+        id="alertMode"
+      >
+        <button
+          type="button"
+          data-mode="sound"
+          class="segment active"
+        >
+          Sound
+        </button>
+
+        <button
+          type="button"
+          data-mode="voice"
+          class="segment"
+        >
+          Voice
+        </button>
+      </div>
+
+
+      <div
+        id="soundSettings"
+        class="sound-settings"
+      >
+        <label class="field">
+          <span>
+            Sound
+          </span>
+
+          <select id="soundSelect">
+            <option value="default-ding">
+              Default Ding
+            </option>
+
+            <option value="okay">
+              Okay
+            </option>
+
+            <option value="suspense">
+              Suspense
+            </option>
+
+            <option value="omg-wow">
+              OMG Wow
+            </option>
+
+            <option value="correct">
+              Correct
+            </option>
+
+            <option
+              id="customSoundOption"
+              value="custom"
+              hidden
+            >
+              Custom sound
+            </option>
+          </select>
+        </label>
+
+
+        <div class="sound-actions">
+          <button
+            id="previewSound"
+            class="sound-action-button"
+            type="button"
+          >
+            ▶ Preview
+          </button>
+
+          <button
+            id="uploadSound"
+            class="sound-action-button"
+            type="button"
+          >
+            Upload sound
+          </button>
+        </div>
+
+
+        <input
+          id="customSoundFile"
+          class="hidden"
+          type="file"
+          accept="audio/mpeg,audio/mp3,audio/wav,audio/ogg,audio/webm"
+        >
+
+
+        <div
+          id="customSoundRow"
+          class="custom-sound-row hidden"
+        >
+          <span
+            id="customSoundName"
+            class="custom-sound-name"
+          >
+            Custom sound
+          </span>
+
+          <button
+            id="removeCustomSound"
+            class="remove-custom-sound"
+            type="button"
+          >
+            Remove
+          </button>
+        </div>
+
+
+        <div class="sound-help">
+          Custom audio up to 1 MB
+        </div>
+      </div>
+
+
+      <div
+        id="voiceSettings"
+        class="voice-settings"
+      >
+      <label class="field">
+        <span>
+          Language
+        </span>
+
+        <select id="language">
+          <option value="auto">
+            Auto
+          </option>
+
+          <option value="en">
+            English
+          </option>
+
+          <option value="vi">
+            Tiếng Việt
+          </option>
+
+          <option value="ja">
+            日本語
+          </option>
+
+          <option value="ko">
+            한국어
+          </option>
+
+          <option value="zh">
+            中文
+          </option>
+        </select>
+      </label>
+
+
+      </div>
+
+
+      <label class="field">
+        <div class="field-row">
+          <span>
+            Volume
+          </span>
+
+          <span id="volumeValue">
+            100%
+          </span>
+        </div>
+
+        <input
+          id="volume"
+          type="range"
+          min="0"
+          max="1"
+          step="0.05"
+          value="1"
+        >
+      </label>
+
+
+      <label
+        id="soundLoopRow"
+        class="toggle-row"
+      >
+        <span>
+          Loop sound until read
+        </span>
+
+        <input
+          id="soundLoop"
+          type="checkbox"
+          checked
+        >
+      </label>
+
+      <button
+        id="testAlert"
+        class="test-alert"
+        type="button"
+      >
+        Test alert
+      </button>
+    </section>
+
+
+    <section class="tasks-section">
+      <div class="tasks-header">
+        <div class="section-label">
+          RUNNING
+        </div>
+
+        <span
+          id="runningCount"
+          class="muted"
+        >
+          0
+        </span>
+      </div>
+
+      <div
+        id="runningList"
+        class="task-list"
+      >
+        <div class="empty-state">
+          No running tasks.
+        </div>
+      </div>
+    </section>
+
+
+    <section class="tasks-section">
+      <div class="tasks-header">
+        <div class="section-label">
+          DONE / UNREAD
+        </div>
+
+        <span
+          id="taskCount"
+          class="muted"
+        >
+          0
+        </span>
+      </div>
+
+      <div
+        id="taskList"
+        class="task-list"
+      >
+        <div class="empty-state">
+          No completed tasks.
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="popup.js"></script>
+</body>
+</html>

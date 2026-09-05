@@ -1,0 +1,27 @@
+[
+  {
+    "id": "default-ding",
+    "label": "Default Ding",
+    "file": "sounds/default-ding.mp3"
+  },
+  {
+    "id": "okay",
+    "label": "Okay",
+    "file": "sounds/okay.mp3"
+  },
+  {
+    "id": "suspense",
+    "label": "Suspense",
+    "file": "sounds/suspense.mp3"
+  },
+  {
+    "id": "omg-wow",
+    "label": "OMG Wow",
+    "file": "sounds/omg-wow.mp3"
+  },
+  {
+    "id": "correct",
+    "label": "Correct",
+    "file": "sounds/correct.mp3"
+  }
+]

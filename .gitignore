@@ -1,0 +1,18 @@
+# Local backups
+*.before_*
+*.backup
+*.bak
+
+# Temporary files
+*.tmp
+*.log
+.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Release packages
+*.zip
+*.crx
+*.pem
