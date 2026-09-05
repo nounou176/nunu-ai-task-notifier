@@ -48,7 +48,15 @@ The public demo assets are stored under `docs/`:
 - `docs/images/05-notification.png` — desktop notification
 - `docs/demo/demo.gif` — full workflow
 
-Default sound previews will be linked from the `sounds/` directory after the audio assets are cleared for redistribution.
+When the sound assets are present in the repository, you can preview them directly:
+
+- 🔔 [Default Ding](sounds/default-ding.mp3)
+- 💬 [Okay](sounds/okay.mp3)
+- ⚡ [Suspense](sounds/suspense.mp3)
+- 😮 [OMG Wow](sounds/omg-wow.mp3)
+- ✅ [Correct](sounds/correct.mp3)
+
+These audio files are third-party assets and are **not covered by the MIT License for the source code**. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for source attribution, provenance, and the copyright/takedown process.
 
 See [docs/SCREENSHOTS.md](docs/SCREENSHOTS.md) for the exact capture checklist.
 
@@ -130,7 +138,7 @@ NUNU uses a small set of Chrome extension permissions for its single purpose: **
 
 ## Current status
 
-The extension is usable today as an unpacked Chrome extension. Before the first Chrome Web Store submission we are finishing release hardening, store assets, audio licensing cleanup, and a known speech-fallback warning shown by Chrome's extension error UI.
+The extension is usable today as an unpacked Chrome extension. Before the first Chrome Web Store submission we are finishing release hardening, store assets, third-party audio rights review, and a known speech-fallback warning shown by Chrome's extension error UI.
 
 ## Development
 
@@ -156,4 +164,6 @@ Bug reports, compatibility reports, translations, and pull requests are welcome.
 
 ## License
 
-Source code is released under the MIT License. Audio assets may have separate licensing and should not be redistributed unless their license is explicitly documented in the repository.
+The project's source code and original project documentation are released under the MIT License. Third-party audio assets are excluded from that grant unless a separate license is explicitly documented for a specific asset.
+
+See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
