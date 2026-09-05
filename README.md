@@ -1,169 +1,132 @@
 # 🔔 NUNU AI Task Notifier
 
-**Stop checking ChatGPT tabs over and over.**
+**ChatGPT done? We’ll ping you. 🔔**
 
-NUNU watches your ChatGPT tasks and tells you when they finish — with a tab status, desktop notification, sound or voice alert, and a small task inbox for multiple ChatGPT tabs.
+Send a task. Leave the tab. NUNU tells you when it’s ready.
 
 [English](README.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh-CN.md)
 
-> Independent open-source browser extension. Not affiliated with or endorsed by OpenAI.
+> Independent open-source extension. Not affiliated with OpenAI.
 
-## See it in 10 seconds
+## How it works
 
-1. Send a prompt in ChatGPT.
-2. Switch to another tab and keep working.
-3. NUNU marks the ChatGPT tab with `⏳` while it is running.
-4. When it finishes, NUNU marks it with `✅` and alerts you.
-5. Click the notification or **Open** in the Task Inbox to return to the exact ChatGPT tab.
+1. Send a prompt.
+2. Go do something else.
+3. `⏳` Working.
+4. `✅` Done.
+5. Click → back to the task.
 
 ```text
-Send prompt → ⏳ running → keep working elsewhere → ✅ finished → click → exact task
+Prompt → ⏳ → chill/work → ✅ → click
 ```
 
-## Why use it?
+## Why?
 
-ChatGPT can take long enough that repeatedly checking a tab becomes distracting — especially when several tasks are running at once. NUNU turns those background tasks into a simple queue you can forget about until they are done.
+Because checking ChatGPT every 10 seconds gets old fast.
 
-## What it does
+NUNU watches the tab. You don’t.
 
-- `⏳` shows that a ChatGPT task is still running.
-- `✅` shows that a background task finished and is still unread.
-- Desktop notifications can take you back to the exact task.
-- The extension badge shows how many completed tasks are unread.
-- The popup shows **RUNNING** and **DONE / UNREAD** tasks.
-- Multiple tasks finishing close together are grouped into one alert.
-- **Sound mode** includes selectable notification sounds, preview, volume, optional looping, and custom audio upload.
-- **Voice mode** can speak completion alerts using browser/OS speech synthesis.
-- Auto language detection supports English, Vietnamese, Japanese, Korean, and Chinese.
-- Task state survives extension reloads.
+## Features
 
-## Demo
+- `⏳` Running
+- `✅` Done / unread
+- 🔔 Desktop alerts
+- 🔊 Sound alerts
+- 🗣️ Voice alerts
+- 📥 Multi-tab Task Inbox
+- 🔢 Unread badge
+- 🧹 Groups nearby alerts
+- 🌏 Auto language: EN / VI / JA / KO / ZH
+- 💾 Keeps task state after reload
 
-The public demo assets are stored under `docs/`:
+## Install
 
-- `docs/images/01-hero.png` — multiple ChatGPT tabs + notification
-- `docs/images/02-sound-mode.png` — Sound mode
-- `docs/images/03-voice-mode.png` — Voice mode
-- `docs/images/04-task-inbox.png` — running and completed tasks
-- `docs/images/05-notification.png` — desktop notification
-- `docs/demo/demo.gif` — full workflow
+### Chrome Web Store
 
-When the sound assets are present in the repository, you can preview them directly:
+Coming soon.
 
-- 🔔 [Default Ding](sounds/default-ding.mp3)
-- 💬 [Okay](sounds/okay.mp3)
-- ⚡ [Suspense](sounds/suspense.mp3)
-- 😮 [OMG Wow](sounds/omg-wow.mp3)
-- ✅ [Correct](sounds/correct.mp3)
+### From source
 
-These audio files are third-party assets and are **not covered by the MIT License for the source code**. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for source attribution, provenance, and the copyright/takedown process.
-
-See [docs/SCREENSHOTS.md](docs/SCREENSHOTS.md) for the exact capture checklist.
-
-## Quick start
-
-### Install from the Chrome Web Store
-
-Chrome Web Store release: **coming after the public release is reviewed and packaged.**
-
-### Install manually from source
-
-1. Download or clone this repository.
+1. Clone/download this repo.
 2. Open `chrome://extensions`.
 3. Turn on **Developer mode**.
 4. Click **Load unpacked**.
-5. Select the extension folder containing `manifest.json`.
-6. Pin **NUNU AI Task Notifier** to the toolbar.
-7. Open `https://chatgpt.com` and use ChatGPT normally.
+5. Pick the folder with `manifest.json`.
+6. Pin NUNU.
+7. Open `https://chatgpt.com`.
 
-## How to use
+Done. 🎉
 
-### Sound mode
+## Sound
 
-Open the NUNU popup and choose **Sound**.
+NUNU → **Sound**
 
-You can:
+Pick a sound, preview it, set volume, loop it, or upload your own.
 
-- choose a built-in notification sound;
-- preview it once;
-- upload a small custom audio file;
-- adjust volume;
-- repeat the sound until the task is opened;
-- use **Test alert** before starting work.
+## Voice
 
-### Voice mode
+NUNU → **Voice**
 
-Choose **Voice**, then select a language or **Auto**.
+Pick a language or **Auto**.  
+Available voices depend on your browser/OS.
 
-When a suitable browser/OS voice is available, NUNU speaks the completion alert. Voice availability depends on the browser and operating system. A lightweight language-safe fallback is planned for environments where a matching voice is unavailable.
+## Already on the tab?
 
-## Background vs active tab
+NUNU stays quiet.
 
-NUNU is intentionally quiet when you are already looking at the exact ChatGPT tab as the response finishes.
+Background task? Ping. 🔔
 
-If the task finishes in the background, it becomes unread and can trigger the configured alert.
+## Multiple tasks?
 
-## Multiple ChatGPT tasks
+Yep.
 
-You can run several ChatGPT tabs at the same time. Each tab is tracked separately.
-
-If several tasks complete close together, NUNU aggregates the alert instead of playing overlapping sounds or voices.
+Each ChatGPT tab is tracked separately.  
+If several finish together, NUNU bundles the alerts.
 
 ## Privacy
 
-NUNU is designed as a local-first extension:
+Local-first:
 
-- no NUNU account;
-- no NUNU backend server;
-- no ads;
-- no analytics by default;
-- no selling of user data;
-- extension settings and task state are stored in Chrome local storage;
-- access is restricted to `https://chatgpt.com/*`.
+- no NUNU account
+- no NUNU backend
+- no ads
+- no analytics by default
+- no selling user data
+- settings stay in Chrome local storage
+- access limited to `https://chatgpt.com/*`
 
-Voice playback uses speech synthesis provided by the browser or operating system. Some installed voices may be network-backed.
+Voice uses browser/OS speech synthesis. Some voices may use the network.
 
-Read the full policy: [PRIVACY.md](PRIVACY.md).
+Full policy: [PRIVACY.md](PRIVACY.md)
 
 ## Permissions
 
-NUNU uses a small set of Chrome extension permissions for its single purpose: **detecting when ChatGPT tasks finish and notifying the user.**
+Only what NUNU needs:
 
-- `notifications` — desktop completion notifications.
-- `storage` — settings, unread state, and optional custom audio.
-- `webRequest` — observes completion of ChatGPT conversation requests; it does not block or modify them.
-- `offscreen` — background audio and speech playback.
-- `scripting` — restores the ChatGPT content integration when needed.
-- `https://chatgpt.com/*` — limits site access to ChatGPT.
+- `notifications` — alerts
+- `storage` — settings + task state
+- `webRequest` — detects finished ChatGPT requests
+- `offscreen` — background sound/voice
+- `scripting` — restores integration when needed
+- `https://chatgpt.com/*` — ChatGPT only
 
-## Current status
+NUNU does not block or modify ChatGPT requests.
 
-The extension is usable today as an unpacked Chrome extension. Before the first Chrome Web Store submission we are finishing release hardening, store assets, third-party audio rights review, and a known speech-fallback warning shown by Chrome's extension error UI.
+## Status
 
-## Development
+Works now as an unpacked Chrome extension.
 
-Main extension files:
-
-```text
-manifest.json
-background.js
-content.js
-offscreen.html
-offscreen.js
-popup.html
-popup.css
-popup.js
-sounds/
-```
-
-The extension uses Manifest V3 and does not require an external application server.
+Chrome Web Store release is next.
 
 ## Contributing
 
-Bug reports, compatibility reports, translations, and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Bugs, translations and PRs are welcome.
+
+[CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-The project's source code and original project documentation are released under the MIT License. Third-party audio assets are excluded from that grant unless a separate license is explicitly documented for a specific asset.
+Source code: MIT.
 
+Third-party audio may use separate licenses.  
 See [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

@@ -1,152 +1,132 @@
 # 🔔 NUNU AI Task Notifier
 
-**Không cần liên tục quay lại kiểm tra các tab ChatGPT.**
+**ChatGPT xong? NUNU ping bạn. 🔔**
 
-NUNU theo dõi các tác vụ ChatGPT của bạn và báo khi chúng hoàn tất — bằng trạng thái trên tab, thông báo desktop, âm thanh hoặc giọng nói, cùng một Task Inbox nhỏ để quản lý nhiều tab ChatGPT cùng lúc.
+Gửi task. Chuyển tab. NUNU báo khi xong.
 
 [English](README.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh-CN.md)
 
-> Đây là extension mã nguồn mở độc lập, không thuộc và không được OpenAI chứng thực.
+> Extension mã nguồn mở độc lập. Không thuộc OpenAI.
 
-## Nhìn 10 giây là biết dùng
+## Dùng thế nào?
 
-1. Gửi prompt trong ChatGPT.
-2. Chuyển sang tab khác và tiếp tục làm việc.
-3. NUNU đánh dấu tab ChatGPT bằng `⏳` khi đang chạy.
-4. Khi xong, NUNU đổi sang `✅` và phát cảnh báo.
-5. Bấm notification hoặc **Open** trong Task Inbox để quay lại đúng tab ChatGPT đó.
+1. Gửi prompt.
+2. Đi làm việc khác.
+3. `⏳` Đang chạy.
+4. `✅` Xong.
+5. Bấm → quay lại task.
 
 ```text
-Gửi prompt → ⏳ đang chạy → làm việc khác → ✅ hoàn tất → bấm → đúng task
+Prompt → ⏳ → đi làm việc khác → ✅ → bấm
 ```
 
-## Vì sao nên dùng?
+## Vì sao?
 
-Khi ChatGPT trả lời lâu hoặc bạn chạy nhiều tab cùng lúc, việc liên tục quay lại kiểm tra rất dễ làm mất tập trung. NUNU biến các tác vụ nền thành một hàng đợi đơn giản: cứ làm việc khác, khi nào xong thì extension báo.
+Vì check ChatGPT mỗi 10 giây hơi mệt.
 
-## NUNU làm được gì?
+NUNU canh tab. Bạn khỏi canh.
 
-- `⏳` = task ChatGPT vẫn đang chạy.
-- `✅` = task nền đã xong nhưng bạn chưa mở lại.
-- Desktop notification có thể mở đúng task vừa hoàn tất.
-- Badge trên icon hiển thị số task chưa đọc.
-- Popup có hai khu vực **RUNNING** và **DONE / UNREAD**.
-- Nhiều task hoàn tất gần nhau sẽ được gộp thành một cảnh báo, tránh chồng âm thanh.
-- **Sound mode**: chọn âm thanh, Preview, chỉnh volume, loop đến khi đọc, upload âm thanh riêng.
-- **Voice mode**: đọc cảnh báo bằng speech synthesis của browser/OS.
-- Auto language hỗ trợ English, Tiếng Việt, 日本語, 한국어, 中文.
-- Trạng thái task vẫn được giữ khi reload extension.
+## Có gì?
 
-## Demo
+- `⏳` Đang chạy
+- `✅` Xong / chưa đọc
+- 🔔 Desktop notification
+- 🔊 Sound alert
+- 🗣️ Voice alert
+- 📥 Task Inbox nhiều tab
+- 🔢 Badge đếm task
+- 🧹 Gộp alert gần nhau
+- 🌏 Auto language: EN / VI / JA / KO / ZH
+- 💾 Reload vẫn nhớ task
 
-Các asset public nằm trong `docs/`:
-
-- `docs/images/01-hero.png` — nhiều tab ChatGPT + notification
-- `docs/images/02-sound-mode.png` — Sound mode
-- `docs/images/03-voice-mode.png` — Voice mode
-- `docs/images/04-task-inbox.png` — Running và Done/Unread
-- `docs/images/05-notification.png` — desktop notification
-- `docs/demo/demo.gif` — toàn bộ workflow
-
-Hướng dẫn chụp ảnh: [docs/SCREENSHOTS.md](docs/SCREENSHOTS.md)
-
-## Cài nhanh
+## Cài đặt
 
 ### Chrome Web Store
 
-Bản Chrome Web Store sẽ được thêm sau khi hoàn tất review và đóng gói public release.
+Sắp có.
 
-### Cài thủ công từ source
+### Cài từ source
 
-1. Tải hoặc clone repository này.
+1. Clone/download repo.
 2. Mở `chrome://extensions`.
 3. Bật **Developer mode**.
 4. Bấm **Load unpacked**.
-5. Chọn thư mục extension có `manifest.json`.
-6. Pin **NUNU AI Task Notifier** lên toolbar.
-7. Mở `https://chatgpt.com` và dùng ChatGPT bình thường.
+5. Chọn folder có `manifest.json`.
+6. Pin NUNU.
+7. Mở `https://chatgpt.com`.
 
-## Cách dùng
+Xong. 🎉
 
-### Sound mode
+## Sound
 
-Mở popup NUNU → chọn **Sound**.
+NUNU → **Sound**
 
-Bạn có thể:
-- chọn sound có sẵn;
-- Preview một lần;
-- upload custom sound nhỏ;
-- chỉnh volume;
-- bật loop đến khi task được mở;
-- dùng **Test alert** trước khi làm việc.
+Chọn tiếng, preview, chỉnh volume, loop hoặc upload sound riêng.
 
-### Voice mode
+## Voice
 
-Chọn **Voice**, sau đó chọn ngôn ngữ hoặc **Auto**.
+NUNU → **Voice**
 
-Nếu browser/OS có voice phù hợp, NUNU sẽ đọc cảnh báo hoàn tất. Voice khả dụng phụ thuộc browser và hệ điều hành. Fallback đa ngôn ngữ nhẹ hơn sẽ được bổ sung sau cho máy thiếu voice tương ứng.
+Chọn ngôn ngữ hoặc **Auto**.  
+Voice tùy browser/OS.
 
-## Khi nào NUNU im lặng?
+## Đang ở đúng tab?
 
-Nếu bạn đang nhìn đúng tab ChatGPT tại thời điểm câu trả lời hoàn tất, NUNU cố ý không cảnh báo.
+NUNU im lặng.
 
-Nếu task hoàn tất ở background, nó sẽ thành unread và kích hoạt alert theo cấu hình.
+Task chạy nền? Ping. 🔔
 
-## Nhiều task cùng lúc
+## Nhiều task?
 
-Bạn có thể chạy nhiều tab ChatGPT. Mỗi tab được theo dõi riêng.
+Có luôn.
 
-Nếu nhiều task xong gần nhau, NUNU sẽ gộp cảnh báo thay vì phát nhiều sound/voice chồng nhau.
+Mỗi tab ChatGPT được theo dõi riêng.  
+Nhiều task xong cùng lúc → gộp alert cho gọn.
 
 ## Privacy
 
-NUNU được thiết kế theo hướng local-first:
+Local-first:
 
-- không cần tài khoản NUNU;
-- không có server NUNU;
-- không quảng cáo;
-- không analytics mặc định;
-- không bán dữ liệu người dùng;
-- settings và task state được lưu trong Chrome local storage;
-- quyền truy cập chỉ giới hạn ở `https://chatgpt.com/*`.
+- không cần tài khoản NUNU
+- không backend NUNU
+- không quảng cáo
+- mặc định không analytics
+- không bán dữ liệu
+- settings lưu trong Chrome local storage
+- chỉ truy cập `https://chatgpt.com/*`
 
-Voice dùng speech synthesis do browser hoặc hệ điều hành cung cấp. Một số voice cài sẵn có thể là network-backed.
+Voice dùng speech synthesis của browser/OS. Một số voice có thể cần mạng.
 
-Xem đầy đủ: [PRIVACY.md](PRIVACY.md)
+Chi tiết: [PRIVACY.md](PRIVACY.md)
 
 ## Permissions
 
-- `notifications` — hiện thông báo khi task hoàn tất.
-- `storage` — lưu settings, unread state và custom audio tùy chọn.
-- `webRequest` — quan sát việc request ChatGPT hoàn tất; không block và không sửa request.
-- `offscreen` — phát audio/TTS khi popup đóng.
-- `scripting` — khôi phục content integration với ChatGPT khi cần.
-- `https://chatgpt.com/*` — giới hạn site access chỉ ở ChatGPT.
+Chỉ xin quyền cần dùng:
 
-## Trạng thái hiện tại
+- `notifications` — báo task xong
+- `storage` — settings + task state
+- `webRequest` — phát hiện request hoàn tất
+- `offscreen` — sound/voice chạy nền
+- `scripting` — khôi phục integration khi cần
+- `https://chatgpt.com/*` — chỉ ChatGPT
 
-Extension hiện dùng được ở chế độ unpacked. Trước khi submit Chrome Web Store, dự án còn một số việc release-hardening như dọn warning TTS fallback, kiểm tra audio license và hoàn thiện store assets.
+NUNU không block hoặc sửa request ChatGPT.
 
-## Development
+## Trạng thái
 
-```text
-manifest.json
-background.js
-content.js
-offscreen.html
-offscreen.js
-popup.html
-popup.css
-popup.js
-sounds/
-```
+Hiện dùng được dạng unpacked Chrome extension.
 
-Extension dùng Manifest V3 và không cần backend server riêng.
+Bước tiếp theo: Chrome Web Store.
 
 ## Contributing
 
-Bug report, compatibility report, bản dịch và pull request đều được chào đón. Xem [CONTRIBUTING.md](CONTRIBUTING.md).
+Bug, bản dịch và PR đều welcome.
+
+[CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## License
 
-Source code phát hành theo MIT License. Audio có thể có license riêng và không nên redistribute nếu license chưa được ghi rõ trong repository.
+Source code: MIT.
+
+Audio bên thứ ba có thể dùng license riêng.  
+Xem [LICENSE](LICENSE) và [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
