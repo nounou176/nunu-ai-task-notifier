@@ -31,6 +31,18 @@ NUNU does not include advertising or analytics by default.
 
 The extension does not intentionally transmit ChatGPT conversation content to a NUNU-controlled server.
 
+## Data processed locally
+
+To provide its task-tracking features, NUNU may process the following data locally in the user's browser:
+
+- Personal communications, such as the user's ChatGPT prompt and response text needed to identify and track a task;
+- Website content from chatgpt.com, such as conversation titles and rendered message text;
+- User activity related to NUNU's task state, such as whether the relevant ChatGPT tab is visible, active, or has been reopened.
+
+This information is processed only to provide NUNU's task tracking, notification, language detection, and Task Inbox features.
+
+NUNU does not transmit this information to a NUNU-controlled server.
+
 ## Speech synthesis
 
 Voice mode uses speech synthesis provided by the browser or operating system. Depending on the installed voice, speech processing may be local or network-backed by that browser/OS speech provider. NUNU does not control those third-party speech engines.
