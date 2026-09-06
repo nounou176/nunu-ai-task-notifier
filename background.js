@@ -1712,9 +1712,16 @@ chrome.runtime.onMessage.addListener((message, sender) => {
         chrome.windows.get(senderWindowId)
       ]);
 
+      // Multi-monitor aware:
+      // If this ChatGPT tab is the visible tab in a Chrome window
+      // that is not minimized, treat it as already seen.
+      //
+      // A window does NOT need OS keyboard focus. This matters
+      // when ChatGPT is visible on monitor 2/3 while the user is
+      // actively working in another window on another monitor.
       const userIsLookingAtThisTab =
         tab.active === true &&
-        windowInfo.focused === true;
+        windowInfo.state !== "minimized";
 
       // User is already looking at this result.
       // It must not become an unread task.
@@ -1743,7 +1750,7 @@ chrome.runtime.onMessage.addListener((message, sender) => {
 
       if (
         tabAgain.active === true &&
-        windowAgain.focused === true
+        windowAgain.state !== "minimized"
       ) {
         if (tasks.has(senderTabId)) {
           await markTaskRead(senderTabId);

@@ -245,10 +245,6 @@ function waitForMatchingVoice(
 
 
 function playSpeechFallbackSound(volume) {
-  console.warn(
-    "NUNU: matching TTS voice unavailable; falling back to sound"
-  );
-
   try {
     setAudioSource(
       DEFAULT_SOUND_URL
