@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NUNU AI Task Notifier</title>
+  <meta
+    name="description"
+    content="Stop checking ChatGPT. NUNU tells you when your task is done."
+  >
+  <link rel="stylesheet" href="./demo.css">
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- HERO -->
+    <section class="hero">
+
+      <div class="logo">🔔</div>
+
+      <h1>NUNU AI Task Notifier</h1>
+
+      <p class="hero-main">
+        Stop checking ChatGPT.
+      </p>
+
+      <p class="hero-sub">
+        Send a task. Go do something else.<br>
+        <strong>NUNU will ping you when it's done.</strong>
+      </p>
+
+      <div class="hero-actions">
+
+        <button id="startDemo" class="primary">
+          ▶ Try the demo
+        </button>
+
+        <a href="#sounds" class="secondary">
+          🔊 Hear the sounds
+        </a>
+
+      </div>
+
+      <p class="tiny">
+        No install needed to try the demo.
+      </p>
+
+    </section>
+
+
+    <!-- DEMO -->
+    <section class="demo-section">
+
+      <div class="section-label">
+        SEE HOW IT WORKS
+      </div>
+
+      <div class="browser">
+
+        <!-- browser header -->
+        <div class="browser-top">
+
+          <div class="browser-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="address-bar">
+            🔒 chatgpt.com
+          </div>
+
+        </div>
+
+
+        <!-- fake tabs -->
+        <div class="tabs">
+
+          <div id="chatTab" class="tab active">
+            ChatGPT
+          </div>
+
+          <div id="workTab" class="tab">
+            My work
+          </div>
+
+        </div>
+
+
+        <!-- ChatGPT screen -->
+        <div id="chatScreen" class="screen">
+
+          <div class="chat-header">
+            <div class="chat-logo">●</div>
+            <strong>ChatGPT</strong>
+          </div>
+
+          <div class="conversation">
+
+            <div class="bubble user">
+              Explain quantum computing simply.
+            </div>
+
+            <div
+              id="assistantBubble"
+              class="bubble assistant"
+            >
+              Ready to start.
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Work screen -->
+        <div
+          id="workScreen"
+          class="screen hidden"
+        >
+
+          <div class="work-content">
+
+            <div class="work-icon">
+              💻
+            </div>
+
+            <h2>
+              You keep doing your work.
+            </h2>
+
+            <p>
+              No need to keep checking ChatGPT.
+            </p>
+
+            <div class="small-task">
+              ChatGPT is still working in the background…
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Notification -->
+        <div
+          id="notification"
+          class="notification hidden"
+        >
+
+          <div class="notification-icon">
+            🔔
+          </div>
+
+          <div class="notification-text">
+
+            <strong>
+              NUNU
+            </strong>
+
+            <p>
+              Your ChatGPT task is done!
+            </p>
+
+          </div>
+
+          <button id="openTask">
+            Open
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- FLOW -->
+      <div class="flow">
+
+        <div class="flow-step">
+          <div class="flow-icon">💬</div>
+          <strong>1. Ask</strong>
+          <span>Send a ChatGPT task</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+          <div class="flow-icon">⏳</div>
+          <strong>2. Leave</strong>
+          <span>Do something else</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+          <div class="flow-icon">🔔</div>
+          <strong>3. Ping!</strong>
+          <span>NUNU tells you</span>
+        </div>
+
+        <div class="flow-arrow">→</div>
+
+        <div class="flow-step">
+          <div class="flow-icon">✅</div>
+          <strong>4. Open</strong>
+          <span>Go back to the task</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SIMPLE EXPLANATION -->
+    <section class="simple">
+
+      <h2>
+        That's it.
+      </h2>
+
+      <p>
+        You don't need to watch ChatGPT while it works.
+      </p>
+
+      <div class="one-line">
+        Ask → leave → 🔔 NUNU → come back
+      </div>
+
+    </section>
+
+
+    <!-- SOUNDS -->
+    <section
+      id="sounds"
+      class="sounds"
+    >
+
+      <div class="section-label">
+        HEAR NUNU
+      </div>
+
+      <h2>
+        🔊 Pick your ping
+      </h2>
+
+      <p class="sounds-sub">
+        Click one. Hear the real sound.
+      </p>
+
+      <div class="sound-grid">
+
+        <button data-sound="default-ding">
+          ▶ Default Ding
+        </button>
+
+        <button data-sound="okay">
+          ▶ Okay
+        </button>
+
+        <button data-sound="suspense">
+          ▶ Suspense
+        </button>
+
+        <button data-sound="omg-wow">
+          ▶ OMG Wow
+        </button>
+
+        <button data-sound="correct">
+          ▶ Correct
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEXT -->
+    <section class="next-section">
+
+      <div class="next-card">
+
+        <div class="next-icon">
+          🧩
+        </div>
+
+        <div>
+          <h2>Want NUNU in Chrome?</h2>
+          <p>
+            Installation takes only a few steps.
+          </p>
+        </div>
+
+        <span class="coming">
+          Install guide ↓
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- INSTALL GUIDE -->
+    <section id="install" class="install-section">
+
+      <div class="section-label">
+        INSTALL NUNU
+      </div>
+
+      <h2 class="install-title">
+        🧩 Put NUNU in Chrome
+      </h2>
+
+      <p class="install-intro">
+        Five small steps. That's all.
+      </p>
+
+
+      <div class="install-box">
+
+        <div class="install-progress">
+
+          <div class="progress-item active" data-progress="0">
+            <span>1</span>
+            Download
+          </div>
+
+          <div class="progress-line"></div>
+
+          <div class="progress-item" data-progress="1">
+            <span>2</span>
+            Extensions
+          </div>
+
+          <div class="progress-line"></div>
+
+          <div class="progress-item" data-progress="2">
+            <span>3</span>
+            Developer mode
+          </div>
+
+          <div class="progress-line"></div>
+
+          <div class="progress-item" data-progress="3">
+            <span>4</span>
+            Load NUNU
+          </div>
+
+          <div class="progress-line"></div>
+
+          <div class="progress-item" data-progress="4">
+            <span>5</span>
+            Done
+          </div>
+
+        </div>
+
+
+        <div class="install-stage">
+
+
+          <!-- STEP 1 -->
+          <div class="install-step active" data-step="0">
+
+            <div class="big-step-icon">
+              ⬇️
+            </div>
+
+            <div class="step-number">
+              STEP 1
+            </div>
+
+            <h3>
+              Download NUNU
+            </h3>
+
+            <p>
+              Get the NUNU folder on your computer.
+            </p>
+
+            <a
+              class="install-main-button"
+              href="https://github.com/nounou176/nunu-ai-task-notifier/archive/refs/heads/main.zip"
+            >
+              ⬇ Download NUNU
+            </a>
+
+            <div class="helper">
+              After downloading, unzip the file.
+            </div>
+
+          </div>
+
+
+          <!-- STEP 2 -->
+          <div class="install-step" data-step="1">
+
+            <div class="big-step-icon">
+              🌐
+            </div>
+
+            <div class="step-number">
+              STEP 2
+            </div>
+
+            <h3>
+              Open Chrome Extensions
+            </h3>
+
+            <p>
+              Paste this into Chrome's address bar.
+            </p>
+
+            <div class="copy-box">
+
+              <code id="extensionsUrl">
+                chrome://extensions
+              </code>
+
+              <button id="copyExtensionsUrl">
+                Copy
+              </button>
+
+            </div>
+
+            <div
+              id="copyMessage"
+              class="helper"
+            >
+              Then press Enter.
+            </div>
+
+          </div>
+
+
+          <!-- STEP 3 -->
+          <div class="install-step" data-step="2">
+
+            <div class="big-step-icon">
+              🛠️
+            </div>
+
+            <div class="step-number">
+              STEP 3
+            </div>
+
+            <h3>
+              Turn on Developer mode
+            </h3>
+
+            <p>
+              Look at the top-right corner.
+            </p>
+
+            <div class="mini-browser-ui">
+
+              <span>
+                Extensions
+              </span>
+
+              <div class="fake-toggle">
+
+                <span>
+                  Developer mode
+                </span>
+
+                <div class="toggle-on">
+                  <div></div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="helper">
+              Make sure the switch is ON.
+            </div>
+
+          </div>
+
+
+          <!-- STEP 4 -->
+          <div class="install-step" data-step="3">
+
+            <div class="big-step-icon">
+              📂
+            </div>
+
+            <div class="step-number">
+              STEP 4
+            </div>
+
+            <h3>
+              Click “Load unpacked”
+            </h3>
+
+            <p>
+              Then choose the NUNU folder you just unzipped.
+            </p>
+
+            <div class="fake-load-button">
+              Load unpacked
+            </div>
+
+            <div class="folder-example">
+              📁 nunu-ai-task-notifier-main
+            </div>
+
+            <div class="helper">
+              Pick the folder that contains
+              <code>manifest.json</code>.
+            </div>
+
+          </div>
+
+
+          <!-- STEP 5 -->
+          <div class="install-step" data-step="4">
+
+            <div class="big-step-icon">
+              🎉
+            </div>
+
+            <div class="step-number">
+              DONE
+            </div>
+
+            <h3>
+              NUNU is ready!
+            </h3>
+
+            <p>
+              Open ChatGPT and send a task.
+            </p>
+
+            <div class="done-flow">
+              Ask → ⏳ → leave → 🔔 NUNU
+            </div>
+
+            <a
+              class="install-main-button"
+              href="https://chatgpt.com"
+              target="_blank"
+              rel="noopener"
+            >
+              Open ChatGPT ↗
+            </a>
+
+          </div>
+
+
+          <!-- NAV -->
+          <div class="install-nav">
+
+            <button
+              id="installBack"
+              class="install-nav-button"
+              disabled
+            >
+              ← Back
+            </button>
+
+            <div id="installCounter">
+              1 / 5
+            </div>
+
+            <button
+              id="installNext"
+              class="install-nav-button primary-small"
+            >
+              Next →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      NUNU AI Task Notifier
+      ·
+      Open source
+      ·
+      Made for people who have better things to do than stare at a tab.
+    </footer>
+
+  </main>
+
+  <script src="./demo.js"></script>
+
+</body>
+</html>

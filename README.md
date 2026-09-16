@@ -8,6 +8,24 @@ Send a task. Leave the tab. NUNU tells you when it’s ready.
 
 > Independent open-source extension. Not affiliated with OpenAI.
 
+<table align="center">
+<tr>
+<td align="center">
+<img src="docs/images/readme/overview.png" width="800" alt="NUNU AI Task Notifier — tab indicator when a ChatGPT task finishes">
+</td>
+</tr>
+</table>
+
+<table align="center">
+<tr>
+<td align="center">
+<a href="https://chromewebstore.google.com/detail/nunu-ai-task-notifier/kkejgnpiempejoladofoaaaifahfcjcl">
+<img src="https://img.shields.io/badge/Chrome%20Web%20Store-Install%20now-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Install NUNU AI Task Notifier from the Chrome Web Store">
+</a>
+</td>
+</tr>
+</table>
+
 ## How it works
 
 1. Send a prompt.
@@ -19,6 +37,23 @@ Send a task. Leave the tab. NUNU tells you when it’s ready.
 ```text
 Prompt → ⏳ → chill/work → ✅ → click
 ```
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
+<img src="docs/images/readme/1.png" width="260" alt="Tab shows an hourglass while ChatGPT is working"><br>
+<sub><b>1. `⏳` Working</b><br>The tab icon changes — go do something else</sub>
+</td>
+<td align="center" width="33%">
+<img src="docs/images/readme/2.png" width="260" alt="Tab shows a green check mark when the task finishes"><br>
+<sub><b>2. `✅` Done</b><br>The icon changes to show the task is complete</sub>
+</td>
+<td align="center" width="33%">
+<img src="docs/images/readme/3.png" width="260" alt="Desktop notification: click to return to the task tab"><br>
+<sub><b>3. 🔔 Click → return</b><br>Click the notification to open the right tab</sub>
+</td>
+</tr>
+</table>
 
 ## Why?
 
@@ -41,11 +76,58 @@ NUNU watches the tab. You don’t.
 
 ## Install
 
-### Chrome Web Store
+### Chrome Web Store (recommended)
 
-Coming soon.
+[Install NUNU AI Task Notifier →](https://chromewebstore.google.com/detail/nunu-ai-task-notifier/kkejgnpiempejoladofoaaaifahfcjcl)
 
-### From source
+Pin NUNU to the toolbar for quick access after installation:
+
+<table width="640">
+<tr>
+<th align="center" width="50%">1. Pin the extension</th>
+<th align="center" width="50%">2. Open NUNU from the toolbar</th>
+</tr>
+<tr>
+<td align="center" valign="middle" width="50%">
+<img src="docs/images/readme/install-pin.png" width="300" alt="Click the puzzle piece icon, then Pin to keep NUNU on the toolbar">
+</td>
+<td align="center" valign="middle" width="50%">
+<img src="docs/images/readme/install-pinned.png" width="200" alt="NUNU icon pinned to the Chrome toolbar">
+</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<sub>Click <b>puzzle piece</b> → <b>Pin</b> next to NUNU.</sub>
+</td>
+<td align="center" valign="top">
+<sub>Click the <b>NUNU</b> icon to open settings.</sub>
+</td>
+</tr>
+</table>
+
+Settings in the popup:
+
+<table>
+<tr>
+<td align="left" valign="top" width="50%">
+<img src="docs/images/readme/popup-sound.png" width="260" alt="NUNU Sound popup: choose a sound, volume and looping">
+</td>
+<td align="left" valign="top" width="50%">
+<img src="docs/images/readme/popup-voice.png" width="260" alt="NUNU Voice popup: choose a spoken language and volume">
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<sub><b>Sound</b> — choose a sound, volume and looping</sub>
+</td>
+<td align="left" valign="top">
+<sub><b>Voice</b> — choose a language and volume</sub>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>Install from source (for developers)</b></summary>
 
 1. Clone/download this repo.
 2. Open `chrome://extensions`.
@@ -56,6 +138,8 @@ Coming soon.
 7. Open `https://chatgpt.com`.
 
 Done. 🎉
+
+</details>
 
 ## Sound
 
@@ -111,12 +195,6 @@ Only what NUNU needs:
 - `https://chatgpt.com/*` — ChatGPT only
 
 NUNU does not block or modify ChatGPT requests.
-
-## Status
-
-Works now as an unpacked Chrome extension.
-
-Chrome Web Store release is next.
 
 ## Contributing
 

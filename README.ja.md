@@ -8,6 +8,24 @@
 
 > 独立したオープンソース拡張機能です。OpenAI 公式ではありません。
 
+<table align="center">
+<tr>
+<td align="center">
+<img src="docs/images/readme/overview.png" width="800" alt="NUNU AI Task Notifier — ChatGPT のタスク完了をタブでお知らせ">
+</td>
+</tr>
+</table>
+
+<table align="center">
+<tr>
+<td align="center">
+<a href="https://chromewebstore.google.com/detail/nunu-ai-task-notifier/kkejgnpiempejoladofoaaaifahfcjcl">
+<img src="https://img.shields.io/badge/Chrome%20Web%20Store-%E4%BB%8A%E3%81%99%E3%81%90%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Chrome ウェブストアから NUNU AI Task Notifier をインストール">
+</a>
+</td>
+</tr>
+</table>
+
 ## 使い方
 
 1. Prompt を送る。
@@ -19,6 +37,23 @@
 ```text
 Prompt → ⏳ → 別作業 → ✅ → クリック
 ```
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
+<img src="docs/images/readme/1.png" width="260" alt="ChatGPT の実行中はタブに砂時計アイコンを表示"><br>
+<sub><b>1. `⏳` 実行中</b><br>タブのアイコンが変わったら、別の作業へ</sub>
+</td>
+<td align="center" width="33%">
+<img src="docs/images/readme/2.png" width="260" alt="タスクが完了するとタブに緑のチェックマークを表示"><br>
+<sub><b>2. `✅` 完了</b><br>アイコンの変化でタスクの完了をお知らせ</sub>
+</td>
+<td align="center" width="33%">
+<img src="docs/images/readme/3.png" width="260" alt="デスクトップ通知をクリックしてタスクのタブに戻る"><br>
+<sub><b>3. 🔔 クリック → 戻る</b><br>通知をクリックすると該当のタブへ移動</sub>
+</td>
+</tr>
+</table>
 
 ## なぜ？
 
@@ -41,11 +76,58 @@ NUNU が見ます。あなたは見なくてOK。
 
 ## Install
 
-### Chrome Web Store
+### Chrome ウェブストア（おすすめ）
 
-Coming soon.
+[NUNU AI Task Notifier をインストール →](https://chromewebstore.google.com/detail/nunu-ai-task-notifier/kkejgnpiempejoladofoaaaifahfcjcl)
 
-### Source から
+インストール後、NUNU をツールバーに固定するとすぐに開けます。
+
+<table width="640">
+<tr>
+<th align="center" width="50%">1. 拡張機能を固定</th>
+<th align="center" width="50%">2. ツールバーから NUNU を開く</th>
+</tr>
+<tr>
+<td align="center" valign="middle" width="50%">
+<img src="docs/images/readme/install-pin.png" width="300" alt="パズルのアイコンをクリックし、ピンで NUNU をツールバーに固定">
+</td>
+<td align="center" valign="middle" width="50%">
+<img src="docs/images/readme/install-pinned.png" width="200" alt="Chrome のツールバーに固定された NUNU アイコン">
+</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<sub><b>パズルのアイコン</b> → NUNU 横の<b>ピン</b>。</sub>
+</td>
+<td align="center" valign="top">
+<sub><b>NUNU</b> アイコンで設定を開きます。</sub>
+</td>
+</tr>
+</table>
+
+ポップアップの設定画面：
+
+<table>
+<tr>
+<td align="left" valign="top" width="50%">
+<img src="docs/images/readme/popup-sound.png" width="260" alt="NUNU の Sound 設定：通知音・音量・繰り返し">
+</td>
+<td align="left" valign="top" width="50%">
+<img src="docs/images/readme/popup-voice.png" width="260" alt="NUNU の Voice 設定：読み上げ言語・音量">
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<sub><b>Sound</b> — 通知音・音量・繰り返しを設定</sub>
+</td>
+<td align="left" valign="top">
+<sub><b>Voice</b> — 読み上げ言語・音量を設定</sub>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>ソースからインストール（開発者向け）</b></summary>
 
 1. Repo を clone/download。
 2. `chrome://extensions` を開く。
@@ -56,6 +138,8 @@ Coming soon.
 7. `https://chatgpt.com` を開く。
 
 完了。🎉
+
+</details>
 
 ## Sound
 
@@ -111,12 +195,6 @@ Voice は browser/OS speech synthesis を使います。一部 voice は network
 - `https://chatgpt.com/*` — ChatGPT only
 
 NUNU は ChatGPT request を block / modify しません。
-
-## Status
-
-現在 unpacked Chrome extension として利用できます。
-
-次は Chrome Web Store。
 
 ## Contributing
 

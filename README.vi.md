@@ -8,6 +8,24 @@ Gửi task. Chuyển tab. NUNU báo khi xong.
 
 > Extension mã nguồn mở độc lập. Không thuộc OpenAI.
 
+<table align="center">
+<tr>
+<td align="center">
+<img src="docs/images/readme/overview.png" width="800" alt="NUNU AI Task Notifier - tab báo khi task ChatGPT chạy xong">
+</td>
+</tr>
+</table>
+
+<table align="center">
+<tr>
+<td align="center">
+<a href="https://chromewebstore.google.com/detail/nunu-ai-task-notifier/kkejgnpiempejoladofoaaaifahfcjcl">
+<img src="https://img.shields.io/badge/Chrome%20Web%20Store-Cài%20đặt%20ngay-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Cài NUNU AI Task Notifier trên Chrome Web Store">
+</a>
+</td>
+</tr>
+</table>
+
 ## Dùng thế nào?
 
 1. Gửi prompt.
@@ -19,6 +37,23 @@ Gửi task. Chuyển tab. NUNU báo khi xong.
 ```text
 Prompt → ⏳ → đi làm việc khác → ✅ → bấm
 ```
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
+<img src="docs/images/readme/1.png" width="260" alt="Tab hiện icon đồng hồ cát khi ChatGPT đang chạy"><br>
+<sub><b>1. `⏳` Đang chạy</b><br>Tab đổi icon, cứ để đó đi làm việc khác</sub>
+</td>
+<td align="center" width="33%">
+<img src="docs/images/readme/2.png" width="260" alt="Tab đổi sang dấu tick xanh khi task xong"><br>
+<sub><b>2. `✅` Xong</b><br>Icon đổi màu, báo task đã hoàn tất</sub>
+</td>
+<td align="center" width="33%">
+<img src="docs/images/readme/3.png" width="260" alt="Desktop notification, bấm để quay lại tab task"><br>
+<sub><b>3. 🔔 Bấm → quay lại</b><br>Notification hiện ra, bấm là nhảy đúng tab</sub>
+</td>
+</tr>
+</table>
 
 ## Vì sao?
 
@@ -41,11 +76,58 @@ NUNU canh tab. Bạn khỏi canh.
 
 ## Cài đặt
 
-### Chrome Web Store
+### Chrome Web Store (khuyên dùng)
 
-Sắp có.
+[Cài NUNU AI Task Notifier →](https://chromewebstore.google.com/detail/nunu-ai-task-notifier/kkejgnpiempejoladofoaaaifahfcjcl)
 
-### Cài từ source
+Ghim NUNU lên toolbar để mở nhanh sau khi cài đặt:
+
+<table width="640">
+<tr>
+<th align="center" width="50%">1. Ghim tiện ích</th>
+<th align="center" width="50%">2. Mở NUNU từ toolbar</th>
+</tr>
+<tr>
+<td align="center" valign="middle" width="50%">
+<img src="docs/images/readme/install-pin.png" width="300" alt="Bấm icon puzzle piece rồi bấm Pin để ghim NUNU lên toolbar">
+</td>
+<td align="center" valign="middle" width="50%">
+<img src="docs/images/readme/install-pinned.png" width="200" alt="Icon NUNU đã ghim sẵn trên toolbar Chrome">
+</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<sub>Bấm <b>puzzle piece</b> → <b>Pin</b> cạnh NUNU.</sub>
+</td>
+<td align="center" valign="top">
+<sub>Bấm icon <b>NUNU</b> để mở cấu hình.</sub>
+</td>
+</tr>
+</table>
+
+Giao diện cấu hình trong popup:
+
+<table>
+<tr>
+<td align="left" valign="top" width="50%">
+<img src="docs/images/readme/popup-sound.png" width="260" alt="Popup NUNU tab Sound: chọn âm thanh, volume, loop">
+</td>
+<td align="left" valign="top" width="50%">
+<img src="docs/images/readme/popup-voice.png" width="260" alt="Popup NUNU tab Voice: chọn ngôn ngữ đọc, volume">
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<sub><b>Sound</b> — chọn âm thanh, volume, loop</sub>
+</td>
+<td align="left" valign="top">
+<sub><b>Voice</b> — chọn ngôn ngữ đọc, volume</sub>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>Cài từ source (cho dev)</b></summary>
 
 1. Clone/download repo.
 2. Mở `chrome://extensions`.
@@ -56,6 +138,8 @@ Sắp có.
 7. Mở `https://chatgpt.com`.
 
 Xong. 🎉
+
+</details>
 
 ## Sound
 
@@ -111,12 +195,6 @@ Chỉ xin quyền cần dùng:
 - `https://chatgpt.com/*` — chỉ ChatGPT
 
 NUNU không block hoặc sửa request ChatGPT.
-
-## Trạng thái
-
-Hiện dùng được dạng unpacked Chrome extension.
-
-Bước tiếp theo: Chrome Web Store.
 
 ## Contributing
 

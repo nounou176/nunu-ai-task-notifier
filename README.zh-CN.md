@@ -8,6 +8,24 @@
 
 > 独立开源扩展。不是 OpenAI 官方产品。
 
+<table align="center">
+<tr>
+<td align="center">
+<img src="docs/images/readme/overview.png" width="800" alt="NUNU AI Task Notifier — 在标签页中提示 ChatGPT 任务已完成">
+</td>
+</tr>
+</table>
+
+<table align="center">
+<tr>
+<td align="center">
+<a href="https://chromewebstore.google.com/detail/nunu-ai-task-notifier/kkejgnpiempejoladofoaaaifahfcjcl">
+<img src="https://img.shields.io/badge/Chrome%20Web%20Store-%E7%AB%8B%E5%8D%B3%E5%AE%89%E8%A3%85-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="从 Chrome 应用商店安装 NUNU AI Task Notifier">
+</a>
+</td>
+</tr>
+</table>
+
 ## 怎么用？
 
 1. 发送 Prompt。
@@ -19,6 +37,23 @@
 ```text
 Prompt → ⏳ → 忙别的 → ✅ → 点击
 ```
+
+<table align="center">
+<tr>
+<td align="center" width="33%">
+<img src="docs/images/readme/1.png" width="260" alt="ChatGPT 运行时，标签页显示沙漏图标"><br>
+<sub><b>1. `⏳` 运行中</b><br>标签页图标变了，放心去忙别的</sub>
+</td>
+<td align="center" width="33%">
+<img src="docs/images/readme/2.png" width="260" alt="任务完成后，标签页显示绿色对勾"><br>
+<sub><b>2. `✅` 完成</b><br>图标变化，提醒你任务已完成</sub>
+</td>
+<td align="center" width="33%">
+<img src="docs/images/readme/3.png" width="260" alt="点击桌面通知返回任务标签页"><br>
+<sub><b>3. 🔔 点击 → 返回</b><br>点击通知即可跳转到对应标签页</sub>
+</td>
+</tr>
+</table>
 
 ## 为什么？
 
@@ -41,11 +76,58 @@ NUNU 帮你盯着。
 
 ## Install
 
-### Chrome Web Store
+### Chrome 应用商店（推荐）
 
-Coming soon.
+[安装 NUNU AI Task Notifier →](https://chromewebstore.google.com/detail/nunu-ai-task-notifier/kkejgnpiempejoladofoaaaifahfcjcl)
 
-### 从 Source 安装
+安装后，将 NUNU 固定到工具栏，方便随时打开：
+
+<table width="640">
+<tr>
+<th align="center" width="50%">1. 固定扩展</th>
+<th align="center" width="50%">2. 从工具栏打开 NUNU</th>
+</tr>
+<tr>
+<td align="center" valign="middle" width="50%">
+<img src="docs/images/readme/install-pin.png" width="300" alt="点击拼图图标，再点击固定，将 NUNU 固定到工具栏">
+</td>
+<td align="center" valign="middle" width="50%">
+<img src="docs/images/readme/install-pinned.png" width="200" alt="已固定在 Chrome 工具栏上的 NUNU 图标">
+</td>
+</tr>
+<tr>
+<td align="center" valign="top">
+<sub>点击<b>拼图图标</b> → NUNU 旁的<b>固定</b>。</sub>
+</td>
+<td align="center" valign="top">
+<sub>点击 <b>NUNU</b> 图标打开设置。</sub>
+</td>
+</tr>
+</table>
+
+弹出窗口中的设置界面：
+
+<table>
+<tr>
+<td align="left" valign="top" width="50%">
+<img src="docs/images/readme/popup-sound.png" width="260" alt="NUNU Sound 设置：提示音、音量、循环">
+</td>
+<td align="left" valign="top" width="50%">
+<img src="docs/images/readme/popup-voice.png" width="260" alt="NUNU Voice 设置：朗读语言、音量">
+</td>
+</tr>
+<tr>
+<td align="left" valign="top">
+<sub><b>Sound</b> — 选择提示音、音量和循环播放</sub>
+</td>
+<td align="left" valign="top">
+<sub><b>Voice</b> — 选择朗读语言和音量</sub>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>从源码安装（开发者）</b></summary>
 
 1. Clone/download repo。
 2. 打开 `chrome://extensions`。
@@ -56,6 +138,8 @@ Coming soon.
 7. 打开 `https://chatgpt.com`。
 
 搞定。🎉
+
+</details>
 
 ## Sound
 
@@ -111,12 +195,6 @@ Voice 使用 browser/OS speech synthesis。部分 voice 可能依赖网络。
 - `https://chatgpt.com/*` — ChatGPT only
 
 NUNU 不会 block 或 modify ChatGPT request。
-
-## Status
-
-目前可作为 unpacked Chrome extension 使用。
-
-下一步：Chrome Web Store。
 
 ## Contributing
 
